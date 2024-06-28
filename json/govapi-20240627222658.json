@@ -1,0 +1,996 @@
+[
+    {
+        "nome": "API Benefícios Previdenciários",
+        "link": "https://www.gov.br/conecta/catalogo/apis/api-beneficios-previdenciarios",
+        "descricao": "O cadastro de Benefícios do Regime Geral de Previdência Social é gerido pelo INSS e operacionalizado pela Empresa de Tecnologia e Informações da Previdência – Dataprev.Utilizando como base as informações contidas no cadastro de benefícios do INSS, a API Benefícios tem como finalidade retornar uma lista de benefícios com principais atributos para a pessoa pesquisada. Os benefícios podem ser de diversas espécies, em que cada uma representa a classificação do tipo do benefício com suas regras e peculiaridades e é representada por um código numérico de 2 posições.\nA API otimiza o tempo que o cidadão levaria para informar os benefícios percebidos por ele, bem como o tempo que o órgão levaria para validar as informações coletadas.\n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-beneficios-previdenciarios/v3/beneficios?cpf=",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-beneficios-previdenciarios/v3/beneficios/pertence-especie?cpf=",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-beneficios-previdenciarios/v3/beneficios/pertence-especie-87?cpf="
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Dataprev"
+    },
+    {
+        "nome": "Cadastro Base de Endereço  (CEP)",
+        "link": "https://www.gov.br/conecta/catalogo/apis/cep-codigo-de-enderecamento-postal",
+        "descricao": "O Cadastro Base de Endereço foi instituído pela Resolução nº 05 de 12 de janeiro de 2021 do CCGD (Comitê Central de Governança de Dados), e define um conjunto mínimo de dados para identificação de um endereço. Para a instituição deste cadastro em específico foi celebrado um acordo com a Empresa Brasileira de Correios e Telégrafos (ECT), que são os atuais gestores dos dados.\nA API do Cadastro Base de Endereço proporciona a interoperabilidade e a integração no uso do conjunto mínimo de dados de endereço, que atualmente conta com dados vinculados ao CEP, visando facilitar o acesso ao conjunto de dados necessário pelos Órgãos e Entidades da Administração Pública Federal Direta, Autárquica e Fundacional e demais Poderes da União, bem como integrantes da Rede Gov.br e demais interessados em suas iniciativas para um Governo 100% integrado, sendo mais um instrumento para impulsionar a transformação digital no Estado brasileiro.\n \nQual o Impacto desta API?\nO Impacto estimado da Interoperabilidade deste serviço público é de R$ 3,61.\nPara maiores informações sobre a metodologia de Cálculo de Impacto da Interoperabilidade, acesse:  https://www.gov.br/governodigital/pt-br/governanca-de-dados/calculadora-de-impacto\n \nO que é uma API?\nAPI é a sigla em inglês para Application Programming Interface, ou interface de programação de aplicações. As interfaces de programação de aplicativos (APIs) são conjuntos de ferramentas, definições e protocolos para a criação de aplicações de software. APIs conectam soluções e serviços, sem a necessidade de saber como esses elementos foram implementados.\n",
+        "endpoints": [
+            "https://www.gov.br/conecta/catalogo/apis/cep-codigo-de-enderecamento-postal/swagger-json/swagger_view",
+            "https://www.gov.br/conecta/catalogo/apis/cep-codigo-de-enderecamento-postal/swagger-json/swagger_view"
+        ],
+        "tecnologias": "application/json ",
+        "tags": "",
+        "seguranca": null,
+        "hospedagem": "Serpro"
+    },
+    {
+        "nome": "Cadastro Base do Cidadão (CBC - CPF)",
+        "link": "https://www.gov.br/conecta/catalogo/apis/cadastro-base-do-cidadao-cbc-cpf",
+        "descricao": "O Cadastro Base do Cidadão - CBC foi instituído pelo Decreto Nº 10.046, de 9 de Outubro de 2019 e é a base de referência de cadastros de pessoas físicas para todos os órgãos e entidades da administração pública federal direta, autárquica e fundacional. Em sua primeira versão, o CBC utiliza a base cadastral de pessoas físicas - CPF da Receita Federal (RFB).\nEstão inscritos os brasileiros e aqueles estrangeiros que possuam alguma relação fiscal com a RFB, para fins de identificação dos contribuintes.  Essa base conta hoje com cerca de 250 milhões de registros (considerando brasileiros, estrangeiros e falecidos).\nA versão atualizada da API CPF Light - V 2.5.0 contempla novos métodos que retornam conjuntos específicos de dados de acordo com o tema.  O objetivo é retornar apenas o conjunto de dados necessário para obter informações de acordo com o tema abordado. Por exemplo, o método Consulta nacionalidade/naturalidade retorna apenas dados de nacionalidade e naturalidade.\nContudo, a nova versão da API ainda contempla o método Consulta CPF, que retorna os dados completos de uma lista de cidadãos.\nO impacto estimado da interoperabilidade deste serviço público por transação é de R$ 8,00.\nPara maiores informações sobre a metodologia de Cálculo de Impacto da Interoperabilidade, acesse:  https://www.gov.br/governodigital/pt-br/governanca-de-dados/calculadora-de-impacto\n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cpf-light/v2/consulta/cpf",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cpf-light/v2/consulta/dados-cadastrais",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cpf-light/v2/consulta/dados-sensiveis",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cpf-light/v2/consulta/identificao",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cpf-light/v2/consulta/nacionalidade-naturalidade",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cpf-light/v2/consulta/ocupacao",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cpf-light/v2/consulta/localizacao",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cpf-light/v2/consulta/telemovel",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cpf-light/v2/consulta/domicilio-fiscal"
+        ],
+        "tecnologias": "REST / JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Serpro"
+    },
+    {
+        "nome": "CadÚnico Serviços",
+        "link": "https://www.gov.br/conecta/catalogo/apis/cadunico-servicos",
+        "descricao": "O Cadastro Único para Programas Sociais do Governo Federal (Cadastro Único) é um instrumento que identifica e caracteriza as famílias de baixa renda, permitindo que o governo conheça melhor a realidade socioeconômica dessa população. Nele são registradas informações como: características do domicílio, identificação de cada pessoa, escolaridade, situação de trabalho e renda, entre outras.\nEssas informações são utilizadas pelo Governo Federal, pelos Estados e pelos municípios para implementação de políticas públicas capazes de promover a melhoria da vida dessas famílias.\nUtilizando como base as informações contidas no Cadastro Único, a API CadÚnico Serviços tem como finalidade retornar para uma determinada pessoa:\n A API otimiza o tempo que o cidadão levaria para comprovar os dados, bem como o tempo que o órgão levaria para validar as informações coletadas.\nÓrgãos e entidades da administração direta, autárquica e fundacional.\n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cadunico-servicos/v1/situacaoCadastral/",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cadunico-servicos/v1/situacaoCadastral/nis"
+        ],
+        "tecnologias": "REST/JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Dataprev"
+    },
+    {
+        "nome": "Cadúnico Serviços  - Indicadores Familiares",
+        "link": "https://www.gov.br/conecta/catalogo/apis/cadunico-servicos-indicadores-familiares",
+        "descricao": "O Cadastro Único para Programas Sociais do Governo Federal (Cadastro Único) é um instrumento que identifica e caracteriza as famílias de baixa renda, permitindo que o governo conheça melhor a realidade socioeconômica dessa população. Nele são registradas informações como: características do domicílio, identificação de cada pessoa, escolaridade, situação de trabalho e renda, entre outras.\nEssas informações são utilizadas pelo Governo Federal, pelos Estados e pelos municípios para implementação de políticas públicas capazes de promover a melhoria da vida dessas famílias.\nUtilizando como base as informações contidas no Cadastro Único, a API CadÚnico Serviços e Indicadores Familiares tem como finalidade retornar para uma determinada pessoa, a partir do CPF ou NIS:\nLegislação Associada: \nDecreto nº 11.016, de 29 de março de 2022, que regulamenta o Cadastro Único para Programas Sociais do Governo Federal, instituído pelo art. 6º-F da Lei nº 8.742, de 7 de dezembro de 1993.\nPortaria MC nº 810, de 14 de setembro de 2022, que define procedimentos para a gestão, operacionalização, cessão e utilização dos dados do Cadastro Único\nPortaria nº 501, de 29 de novembro de 2017, que disciplina o processo de uso do CadÚnico por órgãos e entidades federais como instrumento de seleção de beneficiários de políticas e programas sociais.\nPortaria nº 502, de 29 de novembro de 2017, que institui a Política de Controle de Acesso aos dados do Cadastro Único para Programas Sociais.\n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/sncci/v1/dp/indicadoresFamiliar/{cpf}",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/sncci/v1/dp/indicadoresFamiliar/nis/{nis}"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "DATAPREV"
+    },
+    {
+        "nome": "CadÚnico Serviços - Dados Familiares",
+        "link": "https://www.gov.br/conecta/catalogo/apis/cadunico-servicos-dados-familiares",
+        "descricao": "O Cadastro Único para Programas Sociais do Governo Federal (Cadastro Único) é um instrumento que identifica e caracteriza as famílias de baixa renda, permitindo que o governo conheça melhor a realidade socioeconômica dessa população. Nele são registradas informações como: características do domicílio, identificação de cada pessoa, escolaridade, situação de trabalho e renda, entre outras. Essas informações são utilizadas pelo Governo Federal, pelos Estados e pelos municípios para implementação de políticas públicas capazes de promover a melhoria da vida dessas famílias. Utilizando como base as informações contidas no Cadastro Único, a API CadÚnico Serviços Dados Familiares tem como finalidade retornar para uma determinada pessoa, a partir do CPF ou NIS: \n \nLegislação Associada: \nDecreto nº 11.016, de 29 de março de 2022, que regulamenta o Cadastro Único para Programas Sociais do Governo Federal, instituído pelo art. 6º-F da Lei nº 8.742, de 7 de dezembro de 1993.\nPortaria MC nº 810, de 14 de setembro de 2022, que define procedimentos para a gestão, operacionalização, cessão e utilização dos dados do Cadastro Único\nPortaria nº 501, de 29 de novembro de 2017, que disciplina o processo de uso do CadÚnico por órgãos e entidades federais como instrumento de seleção de beneficiários de políticas e programas sociais.\nPortaria nº 502, de 29 de novembro de 2017, que institui a Política de Controle de Acesso aos dados do Cadastro Único para Programas Sociais.\n \n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cadunico-servicos-dados/v1/dp/dadosFamiliar/nis/{nis}",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cadunico-servicos-dados/v1/dp/dadosFamiliar/{cpf}"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Dataprev"
+    },
+    {
+        "nome": "Carteira de documentos gov.br - Wallet",
+        "link": "https://www.gov.br/conecta/catalogo/apis/carteira-de-documentos-gov-br-wallet",
+        "descricao": "API tem como objetivo recepcionar os dados necessários para criar documentos na wallet do aplicativo gov.br.\n \nO conjunto de serviços da API permite que o órgão integrador realize a gestão do documento do cidadão no app gov.br, sendo possível através da API:\n \n1 – incluir novos documentos para determinado CPF;\n2 – atualizar documentos (segunda via);\n3 -  excluir documentos.\n \nPúblico alvo: \nOrgãos públicos detentores de documento de identificação do cidadão\n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-gestao-wallet/v2/gestao/",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-envio-lotes-wallet/v2/receptor/lote"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Serpro"
+    },
+    {
+        "nome": "Consulta Certidão Negativa de Débitos (CND)",
+        "link": "https://www.gov.br/conecta/catalogo/apis/consultar-certidao-negativa-de-debito",
+        "descricao": "A Certidão Negativa de Débitos (CND) é o documento que comprova a regularidade fiscal de Pessoa Física, Jurídica ou de Imóvel Rural perante a Fazenda Nacional para quaisquer fins, expedida conjuntamente pela Secretaria Especial da Receita Federal do Brasil (RFB) e pela Procuradoria-Geral da Fazenda Nacional (PGFN), referente a todos os créditos tributários federais e à Dívida Ativa da União (DAU) por elas administrados. Em outras palavras, ela é um documento emitido pelo governo que atesta que um dado CPF, CNPJ ou imóvel rural está em dia com suas obrigações junto ao Governo Federal. Qualquer pessoa pode emitir ou consultar uma CND, bastando para isso acessar as páginas do Sistema CND.\nO serviço Consulta CND é uma API HTTP REST que permite a um sistema consultar certidões negativas de débito federais (PGFN e RFB) de pessoas jurídicas, pessoas físicas e imóveis rurais diretamente no Sistema CND, sem necessidade de intervenção humana.\nAo receber uma chamada, a API Consulta CND inicialmente valida os parâmetros. Se tudo estiver correto e o identificador (CNPJ, CPF ou NIRF) for válido e existir, a API verifica se existe uma certidão emitida e ainda dentro do período de validade para o identificador informado. Se houver, a API retorna essa certidão e encerra o processo. Se houver mais de uma certidão válida, a API retorna a mais recente, com maior prazo de validade, junto com o status 1. Se não houver uma certidão emitida e dentro do prazo de validade, a API consulta o sistema-pai Certidões Negativas de Débito. Se não houver impedimento para o identificador informado, o Sistem CND emite uma certidão, que a API retorna ao chamador. Toda certidão é emitida com validade de 180 dias. Se não for possível emitir a certidão, a API retorna uma mensagem de erro. \nQual o Impacto desta API? \nO impacto estimado da interoperabilidade deste serviço público por transação é de R$ 7,81. \nPara maiores informações sobre a metodologia de Cálculo de Impacto da Interoperabilidade, acesse: https://www.gov.br/governodigital/pt-br/governanca-de-dados/calculadora-de-impacto\n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cnd/v1/ConsultaCnd/certidao"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "SERPRO"
+    },
+    {
+        "nome": "Consulta CNPJ",
+        "link": "https://www.gov.br/conecta/catalogo/apis/consulta-cnpj",
+        "descricao": "O Cadastro Nacional de Pessoas Jurídicas (CNPJ) compreende as informações cadastrais de pessoas jurídicas e outros tipos de arranjo jurídico sem personalidade jurídica (como condomínios, órgãos públicos, fundos), ou seja, informações cadastrais das entidades de interesse das administrações tributárias da União, dos Estados, do Distrito Federal e dos Municípios.\nA administração do CNPJ compete à Secretaria Especial da Receita Federal do Brasil (RFB). Foi criado no dia 1º de julho de 1998, por intermédio da Instrução Normativa SRF nº 27/1998 e encontra-se regulamentado pela Instrução Normativa RFB nº 1.863/2018. (Alterado(a) pelo(a) Instrução Normativa RFB nº 1991, de 19 de novembro de 2020)\nA obrigação de se inscrever no CNPJ está definida pelo Capítulo II (art. 3º a art. 6º) da Instrução Normativa RFB nº 1.863/2018.\nA API Consulta CNPJ disponibiliza três serviços, correspondentes a três tipos de consultas, que se diferenciam pelo número de campos retornados.\n \nQual o Impacto desta API?\nO Impacto estimado da Interoperabilidade deste serviço público é de R$ 8,10.\nPara maiores informações sobre a metodologia de Cálculo de Impacto da Interoperabilidade, acesse:  https://www.gov.br/governodigital/pt-br/governanca-de-dados/calculadora-de-impacto\n \n",
+        "endpoints": [
+            "https://gerenciador-conecta.readthedocs.io/manual_recebedor_dados.html#roteiro-geracao-chaves-acesso",
+            "https://gerenciador-conecta.readthedocs.io/manual_recebedor_dados.html#roteiro-geracao-chaves-acesso"
+        ],
+        "tecnologias": "JSON - JavaScript Object Notation ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Serpro"
+    },
+    {
+        "nome": "Faixa de Renda de Grupo Familiar ",
+        "link": "https://www.gov.br/conecta/catalogo/apis/faixa-de-renda-de-grupo-familiar",
+        "descricao": "Utilizando como base as informações contidas no Cadastro Nacional de Informações Sociais - CNIS, a API Faixa de Renda de Grupo Familiar tem como finalidade classificar a renda média de um grupo familiar especificado por uma lista de, no mínimo, dois CPFs.\nA API calcula a renda média mensal familiar, em salários-mínimos, a partir de uma lista contendo o CPF do requerente principal e das pessoas que compõem o grupo familiar dele. A apuração da renda média mensal familiar também considera o período retroativo de doze meses a partir do mês imediatamente anterior ao mês informado no parâmetro competência. Ela classifica então o resultado obtido em faixas pré-estabelecidas¹, retornando o grupo de enquadramento do CPF do requerente principal. A API valida também se o valor declarado de renda, informado como parâmetro de entrada, é menor, igual, ou maior que o valor de renda média familiar calculado pela API².\nA renda será apurada com base nas seguintes informações:\nAs informações de remunerações de vínculos empregatícios serão provenientes também do Extrato de Contribuição CNIS, fonte utilizada para reconhecimento de direito pelo INSS, com base nas fontes de dados GFIP (Guia de recolhimento do FGTS e de Informações à Previdência Social), e-Social e complementações do CNIS comprovadas pelo cidadão na rede de Atendimento do INSS.\nEmbora possam compor renda do cidadão, as informações abaixo não fazem parte do cálculo de renda média mensal familiar:\nA API otimiza consideravelmente o tempo que seria gasto pelo cidadão em informar a renda média de cada integrante de seu grupo familiar, bem como o órgão tem a certeza da veracidade da informação coletada.\nQual o Impacto desta API? \nO impacto estimado da interoperabilidade deste serviço público é de R$ 35,00.\nPara maiores informações sobre a metodologia de Cálculo de Impacto da Interoperabilidade, acesse: https://www.gov.br/governodigital/pt-br/governanca-de-dados/calculadora-de-impacto\n  \n1. A renda média encontrada com base nos parâmetros informado é classificada em uma dos grupos de faixa a seguir:\n2. O parâmetro de comparação identifica se a renda informada é:\n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-renda-familiar/v1/enquadramentos-renda"
+        ],
+        "tecnologias": "REST/JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "DATAPREV"
+    },
+    {
+        "nome": "Pessoa com Deficiência",
+        "link": "https://www.gov.br/conecta/catalogo/apis/pessoa-com-deficiencia",
+        "descricao": "O Registro de Referência da Pessoa com Deficiência foi instituído pela Resolução nº 10, de 23 de junho de 2022 do CCGD (Comitê Central de Governança de Dados), e tem a finalidade de:\na) na Base de Dados do Benefício de Prestação Continuada (BPC);\nb) na Base de Dados da Aposentadoria da Pessoa com Deficiência; e\nc) na Base de Dados da Avaliação Biopsicossocial.\nRecebendo como parâmetro de entrada o CPF do cidadão, a API realiza uma pesquisa nas bases de dados relacionadas retornando um valor que indica se foi ou não encontrado um registro deste CPF cadastrado como Pessoa com Deficiência. Em caso positivo, tem-se que o cidadão pesquisado possui uma deficiência comprovada nos termos da referida Lei. Em caso de retorno negativo, a informação significa apenas que o cidadão ainda não está cadastrado em nenhuma das bases de dados pesquisadas.\nA abrangência da consulta da API será implementada em etapas, iniciando com a consulta à base de beneficiários do BPC e da Lei Complementar nº 142, de 08 de maio de 2013, que regulamenta o § 1o do art. 201 da Constituição Federal, no tocante à aposentadoria da pessoa com deficiência segurada do Regime Geral de Previdência Social - RGPS. Posteriormente, a abrangência incluirá a pesquisa na base de dados do Cadastro-Inclusão e da Avaliação Biopsicossocial.\n \nQual o Impacto desta API?\nO impacto estimado da interoperabilidade deste serviço público é de R$ 64,98.\nPara maiores informações sobre a metodologia de Cálculo de Impacto da Interoperabilidade, acesse:  https://www.gov.br/governodigital/pt-br/governanca-de-dados/calculadora-de-impacto  \n \n \n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-pessoacomdeficiencia/v1"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Dataprev"
+    },
+    {
+        "nome": "Situação Militar",
+        "link": "https://www.gov.br/conecta/catalogo/apis/situacao-militar",
+        "descricao": "O Registro de Referência de Situação Militar foi instituído pela Resolução nº 12, de 14 de dezembro de 2022, do Comitê Central de Governança de Dados (CCGD), e tem a finalidade de:\nA API “Situação Militar” tem por finalidade consultar e informar a situação relacionada às obrigações militares dos cidadãos do sexo masculino vinculados ao Serviço Militar Obrigatório, bem como daqueles, de ambos os sexos, que tenham prestado o serviço militar voluntário.\nRecebendo como parâmetro de entrada o CPF do cidadão, a API retorna um valor que indica se a situação militar do cidadão está regular ou não, podendo dispensar a apresentação de um dos documentos pelo cidadão: CAM – Certificado de Alistamento Militar, CR – Certificado de Reservista, CI – Certificado de Isenção ou CDI – Certificado de Dispensa de incorporação.\nCom base na Lei 4.375, de 17 de agosto de 1964, a comprovação é necessária para que o cidadão exerça alguns direitos básicos como por exemplo, emissão de passaporte, emissão de carteiras profissionais, matrícula em instituições de ensino e posse em cargos públicos.\n \nQual o Impacto desta API?\nO Impacto estimado da Interoperabilidade deste serviço público é de R$ 8,17.\nPara maiores informações sobre a metodologia de Cálculo de Impacto da Interoperabilidade, acesse:  https://www.gov.br/governodigital/pt-br/governanca-de-dados/calculadora-de-impacto\n \n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-situacao-militar/v3/cidadao"
+        ],
+        "tecnologias": "application/json text/xml ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Infraestrutura do Exército Brasileiro."
+    },
+    {
+        "nome": "Validação Biométrica Digital e Facial",
+        "link": "https://www.gov.br/conecta/catalogo/apis/validacao-biometrica",
+        "descricao": "Esse serviço irá realizar o batimento biométrico digital e/ou facial de um indivíduo.\nO serviço irá informar se os dados informados conferem ou não conferem com os dados constantes nas bases do TSE.\nA pesquisa pode ser feita na base individualizada do TSE, na base não individualizada ou na base de casos de atenção, conforme informado no parâmetro de entrada.\n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/v1/biometriaFacial",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/v1/biometriaDigital"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": null
+    },
+    {
+        "nome": "API de Serviços",
+        "link": "https://www.gov.br/conecta/catalogo/apis/api-de-servicos",
+        "descricao": "O Registro de Referência do Portal de Serviços Públicos foi instituído pela Resolução nº 9, de 22 de junho de 2022 do CCGD (Comitê Central de Governança de Dados), e tem a finalidade de:\nO Decreto nº 9.756/2019 instituiu o Portal gov.br como ferramenta centralizada para disponibilização de informações institucionais, notícias e serviços públicos prestados pelo Governo federal. Todas as informações e serviços de órgãos do Poder Executivo Federal devem estar disponíveis neste portal.\n A API de Serviços fornece os dados do Portal gov.br, com informações sobre os serviços publicados, os órgãos, as etapas dos serviços, os contatos dos órgãos etc.\n",
+        "endpoints": [
+            "https://servicos.gov.br/api/v1/servicos/"
+        ],
+        "tecnologias": "REST / JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "SERPRO"
+    },
+    {
+        "nome": "Registro de Referência - Estruturas Organizacionais do Poder Executivo Federal (SIORG)",
+        "link": "https://www.gov.br/conecta/catalogo/apis/estrutura-organizacional",
+        "descricao": "O Registro de Referência das Estruturas Organizacionais do Poder Executivo Federal foi instituído pela Resolução CCGD/ME nº 8, DE 27 de dezembro de 2021 do CCGD (Comitê Central de Governança de Dados), e define um conjunto de dados para identificação de estruturas organizacionais do Poder Executivo Federal.\nEsta API trata dos seguintes dados:\nEstes serviços estão disponíveis apenas para consulta.\n",
+        "endpoints": [
+            "https://estruturaorganizacional.dados.gov.br"
+        ],
+        "tecnologias": "SOAP JSON REST XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Ministério da Economia (ME)"
+    },
+    {
+        "nome": "Registro de Referência - Servidores Públicos Federais (SIAPE Consultas)",
+        "link": "https://www.gov.br/conecta/catalogo/apis/consulta-siape",
+        "descricao": "O Registro de Referência dos Servidores Civis do Poder Executivo Federal foi instituído pela Resolução CCGD/ME nº 7, DE 27 de dezembro de 2021 do CCGD (Comitê Central de Governança de Dados), e define um conjunto de dados para identificação de servidores civis do Poder Executivo Federal. \nO objetivo da API SIAPE Consultas é possibilitar o acesso, em tempo real, por parte dos Sistemas Autorizados, aos dados dos servidores ativos, aposentados e pensionistas, que recebem seus pagamentos pelo SIAPE.\n",
+        "endpoints": [
+            "https://www.gov.br/conecta/catalogo/apis/consulta-siape/ws_siape_consultas-pdf/at_download/file",
+            "https://www.gov.br/conecta/catalogo/apis/consulta-siape/ws_siape_consultas-pdf/at_download/file"
+        ],
+        "tecnologias": "SOAP / XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "SERPRO"
+    },
+    {
+        "nome": "Registro de Referência de Municípios",
+        "link": "https://www.gov.br/conecta/catalogo/apis/registro-referencia-municipios",
+        "descricao": "O Registro de Referência de Municípios foi instituído pela Resolução CCGD/ME nº 6, DE 25 de agosto de 2021 do CCGD (Comitê Central de Governança de Dados), e define um conjunto de dados para identificação de um município brasileiro. Para a instituição deste cadastro em específico foi celebrado um acordo com a Fundação Instituto Brasileiro de Geografia e Estatística (IBGE), que é o atual órgão gestor desses dados.\nA API do Registro de Referência de Municípios proporciona a interoperabilidade e a integração, visando facilitar o acesso ao conjunto de dados de Municípios a ser utilizado pelos Órgãos e Entidades da Administração Pública Federal Direta, Autárquica e Fundacional e demais interessados, sendo mais um instrumento para impulsionar a transformação digital no Estado brasileiro.\n",
+        "endpoints": [
+            "https://servicodados.ibge.gov.br/api/docs/localidades"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "IBGE"
+    },
+    {
+        "nome": "Registro de Referência de Países",
+        "link": "https://www.gov.br/conecta/catalogo/apis/registro-referencia-paises",
+        "descricao": "O Registro de Referência de Países foi instituído pela Resolução CCGD/ME nº 6, DE 25 de agosto de 2021 do CCGD (Comitê Central de Governança de Dados), e define um conjunto de dados para identificação dos países reconhecidos pela Organização das Nações Unidas - ONU. Para a instituição deste cadastro em específico foi celebrado um acordo com a Fundação Instituto Brasileiro de Geografia e Estatística (IBGE), que é o atual órgão gestor desses dados.\nA API do Registro de Referência de Países proporciona a interoperabilidade e a integração, visando facilitar o acesso ao conjunto de dados de países a ser utilizado pelos Órgãos e Entidades da Administração Pública Federal Direta, Autárquica e Fundacional e demais interessados, sendo mais um instrumento para impulsionar a transformação digital no Estado brasileiro.\n",
+        "endpoints": [],
+        "tecnologias": null,
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "IBGE"
+    },
+    {
+        "nome": "Registro de Referência de Unidades Federativas",
+        "link": "https://www.gov.br/conecta/catalogo/apis/registro-referencia-ufs",
+        "descricao": "O Registro de Referência de Unidades Federativas foi instituído pela Resolução CCGD/ME nº 6, DE 25 de agosto de 2021 do CCGD (Comitê Central de Governança de Dados), e define um conjunto de dados para identificação de uma unidade da Federação que contempla o Distrito Federal e os Estados da República Federativa do Brasil. Para a instituição deste cadastro em específico foi celebrado um acordo com a Fundação Instituto Brasileiro de Geografia e Estatística (IBGE), que é o atual órgão gestor desses dados.\nA API do Registro de Referência de Unidades Federativas proporciona a interoperabilidade e a integração, visando facilitar o acesso ao conjunto de dados de Unidades Federativas a ser utilizado pelos Órgãos e Entidades da Administração Pública Federal Direta, Autárquica e Fundacional e demais interessados, sendo mais um instrumento para impulsionar a transformação digital no Estado brasileiro.\n \n",
+        "endpoints": [
+            "https://servicodados.ibge.gov.br/api/docs/localidades"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "IBGE"
+    },
+    {
+        "nome": "Benefício de Prestação Continuada - BPC",
+        "link": "https://www.gov.br/conecta/catalogo/apis/beneficio-de-prestacao-continuada-bpc",
+        "descricao": "Consultar se a Pessoa Física possui Benefício ATIVO (código 00) do tipo LOAS 87 (AMPARO SOCIAL À PESSOA PORTADORA DE NECESSIDADES ESPECIAIS), a partir de um CPF passado como parâmetro.\n \nQual o Impacto desta API?\nO Impacto estimado da Interoperabilidade deste serviço público é de R$ 64,98.\nPara maiores informações sobre a metodologia de Cálculo de Impacto da Interoperabilidade, acesse:  https://www.gov.br/governodigital/pt-br/governanca-de-dados/calculadora-de-impacto\n \n",
+        "endpoints": [
+            "https://api-sp.dataprev.gov.br/bpc/v2.1/beneficios/pertence-especie-87"
+        ],
+        "tecnologias": "REST JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Dataprev"
+    },
+    {
+        "nome": "CNS - Cartão Nacional de Saúde",
+        "link": "https://www.gov.br/conecta/catalogo/apis/cadsus-cadastro-de-usuarios-do-sus",
+        "descricao": "O Web Service do Cartão Nacional de Saúde foi desenvolvido para operacionalizar a troca de informações cadastrais dos Usuários do SUS, permitindo a integração entre Sistemas de Informação em Saúde Estaduais, Municipais, Agência Nacional de Saúde – ANS e Operadoras de Plano de Saúde.\nUtiliza a base de dados do Cadastro Nacional de Usuários do SUS - CadSUS. \n",
+        "endpoints": [
+            "https://servicos-datasus.saude.gov.br/detalhe/tgKoKpju8s"
+        ],
+        "tecnologias": "SOAP PIX-PDQ V3/XML ",
+        "tags": "",
+        "seguranca": "WS-Security",
+        "hospedagem": "DataSUS"
+    },
+    {
+        "nome": "Consulta de Condutas Anticompetitivas",
+        "link": "https://www.gov.br/conecta/catalogo/apis/consulta-de-condutas-anticompetitivas",
+        "descricao": "A API realiza a consulta de Condutas Anticompetitivas no âmbito do CADE.\nUma conduta anticompetitiva é qualquer prática adotada por um agente econômico que possa, ainda que potencialmente, causar danos à livre concorrência, mesmo que o infrator não tenha tido intenção de prejudicar o mercado.\nO poder de mercado por si só não é considerado ilegal, mas quando uma empresa ou grupo de empresas abusa desse poder adotando uma conduta que fere a livre concorrência, a prática configura-se em abuso de poder econômico. Esse abuso não está limitado a um conjunto restrito de práticas específicas, uma vez que a análise sobre a possibilidade de uma conduta causar dano à concorrência é complexa e são muitos os fatores analisados para que se possa caracterizar determinada prática como abuso.\nPor isso, a legislação é ampla, permitindo a atuação do Cade para reprimir as condutas que, após investigação, possam ser caracterizadas como danosas à concorrência.\n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/oauth2/jwt-token",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-conduta-anticompetitiva/v1/conduta-anticompetitiva/findByDocumento/:cpfOuCpnjSomenteNumeros"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "CADE"
+    },
+    {
+        "nome": "ID Jovem",
+        "link": "https://www.gov.br/conecta/catalogo/apis/id-jovem",
+        "descricao": "A API ID Jovem realiza uma consulta para validação por instituições públicas e privadas do documento gratuito virtual ID Jovem, que comprova a condição de baixa renda de jovens de 15 a 29 anos inscritos no Cadastro Único para Programas Sociais do Governo Federal (CadÚnico).\n",
+        "endpoints": [
+            "https://idjovem.juventude.gov.br/apiv1consultaid"
+        ],
+        "tecnologias": "REST / JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Infraestrutura do MMFDH"
+    },
+    {
+        "nome": "Informações dos Regimes Públicos de Previdência Social - CADPREV",
+        "link": "https://www.gov.br/conecta/catalogo/apis/cadprev",
+        "descricao": "São disponibilizadas informações previdenciárias, atuariais, repasses, aplicações e investimentos dos recursos, referentes aos Regimes Próprios de Previdência Social dos Estados, Distrito Federal e dos Municípios.\n",
+        "endpoints": [
+            "https://apicadprev.economia.gov.br/api-docs/"
+        ],
+        "tecnologias": "JSON e CSV ",
+        "tags": "",
+        "seguranca": "Nenhum",
+        "hospedagem": "Infraestrutura do próprio órgão"
+    },
+    {
+        "nome": "Relação Trabalhista ",
+        "link": "https://www.gov.br/conecta/catalogo/apis/relacao-trabalhista",
+        "descricao": "O Cadastro Nacional de Informações Sociais - CNIS, é um banco de dados do Governo Federal que armazena informações trabalhistas e previdenciárias dos trabalhadores brasileiros.Administrado pela Instituto Nacional do Seguro Social - INSS, pela Receita Federal - RFB e pela Secretaria de Previdência Ministério do Trabalho e Previdência, e operacionalizado pela Empresa de Tecnologia e Informações da Previdência - Dataprev, ele tem como principal função servir como prova perante a Previdência Social sobre os vínculos anotados, a remuneração indicada e as contribuições feitas ao INSS.Utilizando como base as informações contidas no CNIS, a API Relação Trabalhista tem como finalidade retornar uma lista relações trabalhistas, conforme Tabela Oficial da Classificação Brasileira de Ocupações (CBO), de um determinado CPF pesquisado.A API otimiza o tempo que o cidadão levaria para informar os vínculos empregatícios dele, bem como o tempo que o órgão levaria para validar as informações coletadas.\nQual o Impacto desta API?\nO impacto estimado da interoperabilidade deste serviço público é de R$ R$ 9,49. Para maiores informações sobre a metodologia de Cálculo de Impacto da Interoperabilidade, acesse: https://www.gov.br/governodigital/pt-br/governanca-de-dados/calculadora-de-impacto \n \n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-relacao-trabalhista/v1/relacoes-trabalhistas?cpf="
+        ],
+        "tecnologias": "REST/JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "DATAPREV"
+    },
+    {
+        "nome": "CADASTUR - Cadastro de Prestadores de Serviços Turísticos",
+        "link": "https://www.gov.br/conecta/catalogo/apis/cadastur-cadastro-de-prestadores-de-servicos-turisticos",
+        "descricao": "O Cadastur é o sistema de cadastro de pessoas físicas e jurídicas que atuam no setor de turismo e garante diversas vantagens e oportunidades aos seus cadastrados e é também uma importante fonte de consulta para o turista. Também visa promover o ordenamento, a formalização e a legalização dos prestadores de serviços turísticos no Brasil, por meio do cadastro de empresas e profissionais do setor.\nO programa é executado pelo Ministério do Turismo, em parceria com os órgãos oficiais de turismo, nos 26 estados e no Distrito Federal.\nConforme a Lei nº 11.771, de 17 de setembro de 2008 entende-se como prestadores de serviços turísticos as sociedades empresárias, sociedades simples, os empresários individuais e os serviços sociais autônomos que prestem serviços turísticos remunerados e que exerçam atividades econômicas relacionadas à cadeia produtiva do turismo.\nAinda conforme a Lei nº 11.771 o cadastro é gratuito, sendo obrigatório para:\n● Acampamentos Turísticos;\n● Agências de Turismo;\n● Meios de Hospedagem;\n● Organizadoras de Evento;\n● Parques Temáticos;\n● Transportadoras Turísticas;\nE opcional para as seguintes atividades:\n● Casas de Espetáculo\n● Centros de Convenções\n● Empreendimentos de Entretenimento e Lazer e Parques Aquáticos\n● Empreendimentos de Apoio ao Turismo Náutico ou à Pesca Desportiva\n● Locadoras de Veículos para Turistas\n● Prestadoras de Serviços de Infraestrutura para Eventos\n● Prestadoras Especializadas em Segmentos Turísticos\n● Restaurantes, Cafeterias, Bares e similares\nO cadastro também é obrigatório para exercer a profissão de Guia de Turismo, conforme Lei nº 8.623, de 28 de janeiro de 1993. O Cadastro neste sistema oferece:\n● Acesso a financiamento por meio de bancos oficiais;\n● Apoio em eventos, feiras e ações do Ministério do Turismo;\n● Incentivo à participação em programas e projetos do governo federal;\n● Participação em programas de qualificação promovidos e apoiados pelo Ministério do Turismo;\n● Viabilidade de Participação em Licitações para os certames que exigem o Certificado CADASTUR;\n● Acesso a Auxílios Emergenciais que podem vir exigir a regularidade do cadastro para sua concessão;\n● Visibilidade nos sites do Cadastur e do Programa Viaje Legal. Mais informações sobre o sistema CADASTUR podem ser encontradas no site https://cadastur.turismo.gov.br/hotsite/#!/public/capa/entrar\n",
+        "endpoints": [
+            "https://gerenciador-conecta.readthedocs.io/manual_recebedor_dados.html#roteiro-geracao-chaves-acesso",
+            "https://gerenciador-conecta.readthedocs.io/manual_recebedor_dados.html#roteiro-geracao-chaves-acesso",
+            "https://gerenciador-conecta.readthedocs.io/manual_recebedor_dados.html#roteiro-geracao-chaves-acesso"
+        ],
+        "tecnologias": "application / JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Infraestrutura do próprio órgão."
+    },
+    {
+        "nome": "CTCA - Controle de Tensões e Conflitos Agrários",
+        "link": "https://www.gov.br/conecta/catalogo/apis/ctca",
+        "descricao": "O Sistema de Controle de Tensões e Conflitos Agrários do Incra (CTCA) contém informações gerais sobre situações de disputas, tensões e conflitos agrários no Brasil, tais como localidade, pessoas envolvidas e dados do imóvel objeto da situação conflituosa.\n",
+        "endpoints": [
+            "Endpoint Produção:",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-ctca/v1/",
+            "Endpoint Access Token URL de Produção:\nhttps://apigateway.conectagov.estaleiro.serpro.gov.br/oauth2/jwt-token",
+            "https://h-apigateway.conectagov.estaleiro.serpro.gov.br/oauth2/token",
+            "https://h-apigateway.conectagov.estaleiro.serpro.gov.br/oauth2/token"
+        ],
+        "tecnologias": "REST/JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": null
+    },
+    {
+        "nome": "Declaração de Aptidão ao Pronaf (DAP)",
+        "link": "https://www.gov.br/conecta/catalogo/apis/infodap",
+        "descricao": "A API InfoDAP tem a finalidade de disponibilizar informações da Declaração de Aptidão ao Pronaf (DAP), documento que identifica e qualifica o público definido da Lei 11.326/2006 para acesso diferenciado a políticas públicas destinadas ao fortalecimento da agricultura familiar.\n Esta API trata dos seguintes dados:\nA Declaração de Aptidão ao Programa Nacional de Fortalecimento da Agricultura Familiar (DAP) é o instrumento utilizado para identificar e qualificar as Unidades Familiares de Produção Agrária (UFPA) da Agricultura Familiar e suas formas associativas organizadas em pessoas jurídicas. Consideram-se beneficiários de DAP a UFPA composta por: agricultores/as familiares, pescadores artesanais, aquicultores, maricultores, silvicultores, extrativistas, quilombolas, indígenas, assentados da reforma agrária e beneficiários do Programa Nacional de Crédito Fundiário.\n \n",
+        "endpoints": [
+            "http://infodap.mda.gov.br/ws_infodap/WCF_infoDap.svc"
+        ],
+        "tecnologias": "SOAP XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "MAPA"
+    },
+    {
+        "nome": "SIGEF GEO",
+        "link": "https://www.gov.br/conecta/catalogo/apis/sigef-geo",
+        "descricao": "Consulta de dados de parcelas georreferenciadas certificadas ou em processo de regularização fundiária inseridas e validadas no Sistema de Gestão Fundiária – SIGEF.\n",
+        "endpoints": [
+            "Endpoint Produção:",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-sigef-geo/v1/parcelas",
+            "Endpoint Access Token URL de Produção:\nhttps://apigateway.conectagov.estaleiro.serpro.gov.br/oauth2/jwt-token",
+            "https://h-apigateway.conectagov.estaleiro.serpro.gov.br/oauth2/token",
+            "https://h-apigateway.conectagov.estaleiro.serpro.gov.br/oauth2/token"
+        ],
+        "tecnologias": null,
+        "tags": null,
+        "seguranca": null,
+        "hospedagem": null
+    },
+    {
+        "nome": "SIPRA - Beneficiários da Reforma Agrária",
+        "link": "https://www.gov.br/conecta/catalogo/apis/sipra-reforma-agraria",
+        "descricao": "O Sistema de Informações de Projetos de Reforma Agrária (SIPRA) é o sistema informatizado que tem como objetivo tratar, sistematizar e recuperar dados sobre os Projetos de Reforma Agrária bem como dos seus beneficiários.\n",
+        "endpoints": [
+            "https://gerenciador-conecta.readthedocs.io/manual_recebedor_dados.html#roteiro-geracao-chaves-acesso",
+            "https://gerenciador-conecta.readthedocs.io/manual_recebedor_dados.html#roteiro-geracao-chaves-acesso"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "INCRA"
+    },
+    {
+        "nome": "SNCCI - Sistema Nacional de Concessão de Créditos de Instalação",
+        "link": "https://www.gov.br/conecta/catalogo/apis/sncci",
+        "descricao": "Planos de pagamento do Crédito de Instalação, contendo as parcelas devidas para pagamento pelos beneficiários.\n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/sncci/v1/parcelas",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/sncci/v1/creditos/",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/sncci/v1/creditos-ativos",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/sncci/v1/boletos"
+        ],
+        "tecnologias": "REST JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "INCRA"
+    },
+    {
+        "nome": "SNCR - Sistema Nacional de Cadastro Rural",
+        "link": "https://www.gov.br/conecta/catalogo/apis/sncr-sistema-nacional-de-cadastro-rural",
+        "descricao": "O Sistema Nacional de Cadastro Rural (SNCR) compreende o cadastro de imóveis rurais, cadastro de proprietários e detentores de imóveis rurais, cadastro de arrendatários e parceiros rurais, cadastro de terras públicas e cadastro nacional de florestas públicas.\nO serviço disponibiliza a consulta de informações de imóvel rural e verificação de propriedade/posse de pessoa física ou jurídica.\n \n",
+        "endpoints": [
+            "https://gerenciador-conecta.readthedocs.io/manual_recebedor_dados.html#roteiro-geracao-chaves-acesso",
+            "https://gerenciador-conecta.readthedocs.io/manual_recebedor_dados.html#roteiro-geracao-chaves-acesso"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "SERPRO"
+    },
+    {
+        "nome": "Notificações de Síndrome Gripal",
+        "link": "https://www.gov.br/conecta/catalogo/apis/notificacoes-de-sindrome-gripal",
+        "descricao": "O Ministério da Saúde, por meio da Secretaria de Vigilância em Saúde (SVS), implementou, devido à pandemia, a vigilância da Síndrome Gripal (SG) de casos leves a moderados suspeitos de COVID-19.\n Esta API tem como finalidade disponibilizar o banco de dados epidemiológicos de SG, a partir da incorporação do sistema e-SUS VE Notifica, em vigor a partir de março de 2020.\n",
+        "endpoints": [
+            "https://opendatasus.saude.gov.br/dataset/casos-nacionais"
+        ],
+        "tecnologias": "CSV ",
+        "tags": "",
+        "seguranca": null,
+        "hospedagem": "DataSUS"
+    },
+    {
+        "nome": "Registro de Ocupação Hospitalar COVID-19",
+        "link": "https://www.gov.br/conecta/catalogo/apis/registro-de-ocupacao-hospitalar-covid-19",
+        "descricao": "O Ministério da Saúde, por meio da Secretaria de Atenção Especializada em Saúde (SAES), implementou, devido à pandemia, o registro da ocupação hospitalar em leitos COVID e demais leitos, ou seja, o censo hospitalar diário.\nEsta API  tem como finalidade disponibilizar o banco de dados da ocupação dos leitos, a partir da incorporação do sistema e-SUS Notifica, em vigor a partir de abril de 2020.\n",
+        "endpoints": [
+            "https://opendatasus.saude.gov.br/dataset/registro-de-ocupacao-hospitalar"
+        ],
+        "tecnologias": "CSV ",
+        "tags": "",
+        "seguranca": "Nenhum",
+        "hospedagem": "DataSUS"
+    },
+    {
+        "nome": "RNDS - Rede Nacional de Dados em Saúde",
+        "link": "https://www.gov.br/conecta/catalogo/apis/rnds-rede-nacional-de-dados-em-saude",
+        "descricao": "A Rede Nacional de Dados em Saúde (RNDS) é uma plataforma nacional de integração de dados em saúde e é um projeto estruturante do Conecte SUS, programa do Governo Federal para a transformação digital da saúde no Brasil.\n O Web Service da RNDS foi desenvolvido para permitir que os Laboratórios de Análises Clínicas compartilhem os resultados de exames de detecção do COVID-19 para a RNDS disponibilizando resultados confiáveis para quem precisa no momento que precisa.  A API tem como principais usuários os Laboratórios de Análises Clínicas públicos e privados.\n \n",
+        "endpoints": [
+            "https://servicos-datasus.saude.gov.br/detalhe/UZQjoYDDFN"
+        ],
+        "tecnologias": "RESTFULL FHIR v4 / JSON ",
+        "tags": "",
+        "seguranca": "Outro",
+        "hospedagem": "DataSUS"
+    },
+    {
+        "nome": "Acesso gov.br ",
+        "link": "https://www.gov.br/conecta/catalogo/apis/brasil-cidadao-login-unico",
+        "descricao": "A conta gov.br é um meio de acesso digital do usuário aos serviços públicos digitais.   Esta Conta garante a identificação de cada cidadão que acessa os serviços digitais do governo.  Essa é a nova proposta do Governo federal, para facilitar a identificação e autenticação do cidadão, privilegiando a governança e a convergência autoritativa, e finalmente o controle de acesso unificado.\nO Acesso gov.br opera um conjunto de APIs interdependentes: API Acesso gov.br - Contas ;  API Acesso gov.br - Confiabilidades;  API Acesso gov.br - Categorias. \nEstas APIs possibilitam a integração ao Portal de login único do cidadão. \n",
+        "endpoints": [
+            "https://acesso.gov.br"
+        ],
+        "tecnologias": "OPENID-CONNECT; SOAP ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "SERPRO"
+    },
+    {
+        "nome": "Assinatura Digital Avançada",
+        "link": "https://www.gov.br/conecta/catalogo/apis/assinatura-digital-avancada",
+        "descricao": "A assinatura eletrônica destina-se a interações com o Poder Público e permite que você assine um documento em meio digital a partir da sua conta govbr. O documento com a assinatura digital avançada tem a mesma validade de um documento com assinatura física e é regulamentado pelo Decreto Nº 10.543, de 13/11/2020.\nPara a assinatura avançada é necessário que o cidadão possua uma conta govbr “verificada” ou “comprovada” (contas “básicas” não podem utilizar o serviço).\n",
+        "endpoints": [],
+        "tecnologias": "REST / JSON ",
+        "tags": "",
+        "seguranca": null,
+        "hospedagem": "Instituto de Tecnologia da Informação - ITI"
+    },
+    {
+        "nome": "Autenticação SIGAC",
+        "link": "https://www.gov.br/conecta/catalogo/apis/autenticacao-sigac",
+        "descricao": "O SIGAC é responsável pela autenticação e autorização dos módulos do sistema SIGEPE e pela autenticação de demais aplicações parceiras que utilizam da base de dados do SIGAC para realizar suas operações de autenticação.\n",
+        "endpoints": [
+            "https://servicos.gestaodeacesso.planejamento.gov.br/sigepe-gerid-webservices/ AutorizacaoMovelWsImplService"
+        ],
+        "tecnologias": "SOAP XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "SERPRO"
+    },
+    {
+        "nome": "COFIEX - Comissão de Financiamentos Externos",
+        "link": "https://www.gov.br/conecta/catalogo/apis/cofiex",
+        "descricao": "Disponibilização de dados sobre projetos e programas do setor público que contam com financiamento externo de organismos multilaterais e bilaterais, no âmbito das atribuições da Secretaria de Assuntos Econômicos Internacionais e da Comissão de Financiamentos Externos – COFIEX.\nPúblico Alvo\n \nLegislação Associada\nDecreto nº  9.075, de 6 de junho de 2017;\nResolução nº 1, de 10 de fevereiro de 2021 - Regimento Interno da COFIEX; \nResolução nº 2, de 10 de fevereiro de 2021 - Regimento Interno do Grupo Técnico da COFIEX – GTEC/COFIEX; \nResolução nº 3, de 29 de maio de 2019 -Critérios com relação a pleitos de Estados, Distrito Federal e Municípios \nResolução nº 17, de 7 de junho de 2021 – Critérios de Análise de Projetos \nLink para mais informações:\nRESOLUÇÃO nº 1, DE 3 DE MAIO DE 2013\nAdota o Sistema de Gerenciamento Integrado - SIGS da Secretaria de Assuntos Internacionais do Ministério do Planejamento, Orçamento e Gestão como sistema de gestão eletrônica de documentos com certificação digital.\nPortaria nº 1, de 21 de março de 2013\nInstitui o Sistema de Gerenciamento Integrado - SIGS no âmbito da Secretaria de Assuntos Internacionais do Ministério do Planejamento, Orçamento e Gestão\nhttps://www.gov.br/produtividade-e-comercio-exterior/pt-br/assuntos/assuntos-economicos-internacionais/cofiex/cofiex/\n",
+        "endpoints": [
+            "https://apicofiex.economia.gov.br/api-docs/"
+        ],
+        "tecnologias": "JSON CSV ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Infraestrutura do próprio órgão"
+    },
+    {
+        "nome": "Consulta Cadastro Integrado de Projetos de Investimentos – Obrasgov.br ",
+        "link": "https://www.gov.br/conecta/catalogo/apis/consulta-cadastro-integrado-de-projetos-de-investimentos-2013-obrasgov.br",
+        "descricao": "O Cadastro Integrado de Projetos de Investimentos, o Obrasgov.br, foi instituído pelo Decreto nº 10.496, de 28 de setembro de 2020, que o institui para o registro centralizado de informações de projetos de investimento em infraestrutura, custeados com recursos dos Orçamentos Fiscal e da Seguridade Social, no âmbito dos órgãos e entidades do Poder Executivo federal integrantes dos Orçamentos Fiscal e da Seguridade Social.Esta API trata os seguintes dados:\nCom essa API, é possível identificar os quantitativos de obras que estão em execução, paralisadas ou concluídas nas regiões do Brasil.\nO Obrasgov.br foi instituído pelo Decreto nº 10.496, de 28 de setembro de 2020 e regulamentado pela PORTARIA SEGES/ME Nº 25.405, DE 23 DE DEZEMBRO DE 2020.\nGoverno Federal, Estados, Distrito Federal, Municípios, Órgãos de Controle e Organizações da Sociedade Civil.\n",
+        "endpoints": [
+            "/obrasgov/api/api-obrasgov-docs"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Ministério da Gestão e da Inovação em Serviços Públicos (MGI)"
+    },
+    {
+        "nome": "Consultar Ato de Concentração",
+        "link": "https://www.gov.br/conecta/catalogo/apis/consultar-ato-de-concentracao",
+        "descricao": "A API realiza a consulta de Atos de Concentração (Fusões ou Aquisições) no âmbito do CADE.\n",
+        "endpoints": [
+            "https://hom-apis.cade.gov.br",
+            "https://hom-apis.cade.gov.br"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Infraestrutura do próprio do órgão (CADE)."
+    },
+    {
+        "nome": "Fala.Br - Ouvidorias",
+        "link": "https://www.gov.br/conecta/catalogo/apis/fala-br",
+        "descricao": "O Fala.Br é um canal integrado para encaminhamento de manifestações (denúncias, reclamações, solicitações, sugestões e elogios) a órgãos e entidades do Poder Executivo federal. \nA API disponibiliza serviços para que aplicações de terceiros possam cadastrar, consultar e tratar manifestações.\n",
+        "endpoints": [
+            "https://falabr.cgu.gov.br/api/*"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "CGU"
+    },
+    {
+        "nome": "Outorgas de Geração",
+        "link": "https://www.gov.br/conecta/catalogo/apis/outorga",
+        "descricao": "Permitir consultar dados dos empreendimentos outorgados de geração. Através do código do empreendimento (CEG) consegue-se todas as informações detalhadas da usina.\n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/oauth2/jwt-token",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-outorgas/v1/ConsultaDadosUsina"
+        ],
+        "tecnologias": "REST JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "ANEEL"
+    },
+    {
+        "nome": "Polímero - Composição Societária dos Agentes do Setor Elétrico",
+        "link": "https://www.gov.br/conecta/catalogo/apis/polimero",
+        "descricao": "A API Polímero é um webservice que permite consultar informações sobre cadeia societária que estão registradas no Sistema Polímero. \nOs agentes do Setor Elétrico devem informar à ANEEL, por meio do sistema Polímero, a composição societária de seus empreendimentos por meio do preenchimento dos sistemas disponibilizados pela Agência. \nA regulação Econômico-Financeira foi aprovada pela Resolução Normativa ANEEL nº 948, de 16/11/2021. Já a Conforme art. 4º do Módulo II do Anexo a essa Norma, o concessionário, permissionário ou autorizado de energia elétrica deverá enviar à Superintendência de Regulação Econômica e Estudos do Mercado - SRM, da ANEEL, informação atualizada relativa à respectiva composição societária na concretização da operação de transferência acionária e periodicamente, no último dia de cada trimestre civil. Na ocasião, deve identificar o grupo de controle e explicitar todas as participações societárias diretas e indiretas dos respectivos controladores.  \nA obrigatoriedade de informar à ANEEL qualquer alteração na composição societária também é mencionado no art. 2º da Resolução Normativa ANEEL nº  921, de 23 de fevereiro de 2021, a qual estabelece os deveres, direitos e outras condições gerais aplicáveis às outorgas de autorizações a pessoas jurídicas, físicas ou empresas reunidas em consórcio  interessadas em se estabelecerem como Produtores Independentes de Energia Elétrica ou Autoprodutores de Energia de Elétrica, tendo por objeto a  implantação ou a exploração de central geradora de energia elétrica. \nPara saber mais, consulte: Composição Societária (www.gov.br)\n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-polimero/v1/Consulta/ObterCadeiaSocietariaSemCpf",
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-polimero/v1/Consulta/ObterCadeiaSocietaria"
+        ],
+        "tecnologias": ".Net Core 5.0 / JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Serpro"
+    },
+    {
+        "nome": "Portal da Transparência do Governo Federal",
+        "link": "https://www.gov.br/conecta/catalogo/apis/portal-da-transparencia-do-governo-federal",
+        "descricao": "Disponibiliza os dados publicados no Portal da Transparência do Governo Federal contendo informações sobre sobre Acordos de Leniência, Auxílio Emergencial, Benefício de Prestação Continuada (BPC), Bolsa Família, Cadastro de Expulsões da Administração Federal (CEAF), Cadastro Nacional de Empresas Inidôneas e Suspensas (CEIS), Cadastro Nacional de Empresas Punidas (CNEP), Contratos do Poder Executivo Federal, Convênios do Poder Executivo Federal, Despesas Públicas, Emendas parlamentares, Entidades Privadas sem Fins Lucrativos Impedidas (CEPIM), Garantia-Safra, Gastos por meio de cartão de pagamento, Licitações do Poder Executivo Federal, Programa de Erradicação do Trabalho Infantil (Peti), Seguro Defeso, Servidores do Poder Executivo Federal e  Viagens a serviço.\n",
+        "endpoints": [
+            "Detalhamento Técnico Endpoint Produção:\thttp://www.portaldatransparencia.gov.br/api-de-dados/*"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "Nenhum",
+        "hospedagem": "Embratel"
+    },
+    {
+        "nome": "Sistema e-Aud de Auditorias da CGU",
+        "link": "https://www.gov.br/conecta/catalogo/apis/sistema-e-aud-de-auditorias-da-cgu",
+        "descricao": "Disponibiliza informações e transações para os dados de Auditorias da CGU.  Sistema e-Aud em API-REST.\nConsultas de Tarefas do e-Aud.\nConsulta de Relatórios publicados da CGU\nConsulta de Monitoramentos de Recomendações da CGU.\nOperações sobre tarefas do Sistema.\n",
+        "endpoints": [
+            "https://eaud.cgu.gov.br/"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "CGU"
+    },
+    {
+        "nome": "Publicar no Diário Oficial da União - DOU",
+        "link": "https://www.gov.br/conecta/catalogo/apis/publicar-no-dou",
+        "descricao": "A imprensa Nacional disponibiliza o WS-INCom, para envio de matérias para publicação no Diário Oficial da União(DOU).\n",
+        "endpoints": [],
+        "tecnologias": "SOAP JSON ",
+        "tags": "",
+        "seguranca": "Outro",
+        "hospedagem": "Imprensa Nacional"
+    },
+    {
+        "nome": "SIAPE Ocorrências - Servidores Públicos Federais",
+        "link": "https://www.gov.br/conecta/catalogo/apis/siape-ocorrencias",
+        "descricao": "O Objetivo da API de Ocorrências do SIAPE é permitir o envio dos dados de afastamentos e ocorrências dos Servidores de forma automatizada.\nO controle eletrônico de frequência dos servidores públicos federais na Administração Pública Federal direta, autárquica e fundacional, integrantes do SIPEC, surgiu com a publicação do Decreto nº 1.867, de 17 de abril 1996. Em 12 de setembro de 2018 com a publicação da Instrução Normativa nº 2 da SGP, foram estabelecidos critérios, orientações, e procedimentos gerais a serem observados pelos órgãos.\nEm complemento foi publicada a Instrução Normativa SGPRT nº 125, de 3 de dezembro de 2020 reforçando que os órgãos e entidades do SIPEC, obrigatoriamente, devem utilizar sistema informatizado para controle de ponto, podendo adotar um sistema próprio ou utilizar um sistema disponibilizado pelo Órgão Central do SIPEC. Define que os órgãos e entidades que já possuem sistemas próprios de controle eletrônico de frequência deverão integrar seus sistemas ao Sistema Estruturante de Gestão de Pessoas do Órgão Central do SIPEC, (ou seja, o SIAPE), para a adoção do banco de horas.\n",
+        "endpoints": [
+            "https://www.gov.br/conecta/catalogo/apis/siape-ocorrencias/DOC-CGGPP-Guia%20de%20integracao%20dos%20Sistemas%20Eletronicos%20de%20Frequencia%20com%20SIAPE_v1.9.pdf/at_download/file",
+            "https://www.gov.br/conecta/catalogo/apis/siape-ocorrencias/DOC-CGGPP-Guia%20de%20integracao%20dos%20Sistemas%20Eletronicos%20de%20Frequencia%20com%20SIAPE_v1.9.pdf/at_download/file"
+        ],
+        "tecnologias": "SOAP / XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "SERPRO"
+    },
+    {
+        "nome": "API CADIN CONSULTA / CONTRATANTE ",
+        "link": "https://www.gov.br/conecta/catalogo/apis/api-cadin-consulta-contratante",
+        "descricao": "Api para obtenção de informações de cadastro por entidades Contratantes \n",
+        "endpoints": [],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "SERPRO "
+    },
+    {
+        "nome": "API CADIN CREDORA",
+        "link": "https://www.gov.br/conecta/catalogo/apis/api-cadin-credora",
+        "descricao": "Api para gerenciamento de cadastro para acesso por entidades credoras\n",
+        "endpoints": [],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "SERPRO"
+    },
+    {
+        "nome": "Consulta Dívida Ativa da União",
+        "link": "https://www.gov.br/conecta/catalogo/apis/consulta-divida-ativa-da-uniao",
+        "descricao": "A Dívida Ativa da União é um cadastro mantido pelo Governo Federal através da Procuradoria Geral da Fazenda Nacional - PGFN, utilizado para inscrever pessoas físicas ou jurídicas com débitos de natureza tributária e não-tributária, cuja titularidade do crédito seja da Fazenda Pública Nacional, conforme definido no art. 39 da Lei n° 4.320, de 17 de março de 1964, ou débitos de natureza não tributária, que não sejam de titularidade da Fazenda Pública Nacional, mas que por disposição de lei administra o cadastro em dívida ativa, como é exemplo o FGTS, conforme disposto no art. 2º da Lei n.° 8.844 de 20 de janeiro de 1994.\nA API “Dívida Ativa da União” tem como finalidade consultar de forma automática se uma pessoa física ou jurídica está inscrita no cadastro de Dívida Ativa da União, recebendo como parâmetro de entrada o CPF ou CNPJ, retornando valores referentes à inscrição no cadastro como por exemplo valor, origem, vencimento, e fundamento legal da dívida.\nAs informações sobre a dívida ativa da união são publicadas trimestralmente em dados abertos pela PGFN, conforme disposto na Portaria PGFN nº 636, de 9 de janeiro de 2020, porém, a utilização da API para a automatização das consultas pode significar um considerável ganho de tempo e recursos na execução da tarefa.\n",
+        "endpoints": [
+            "https://gateway.apiserpro.serpro.gov.br/consulta-divida-ativa-df/api"
+        ],
+        "tecnologias": "HTTP REST ",
+        "tags": null,
+        "seguranca": null,
+        "hospedagem": null
+    },
+    {
+        "nome": "Gestão de Créditos - Dívida Ativa",
+        "link": "https://www.gov.br/conecta/catalogo/apis/gestao-de-creditos-divida-ativa",
+        "descricao": "O sistema Sapiens Dívida oferta um catálogo de serviços abertos de interoperabilidade para o gerenciamento da dívida a usuários externos das autarquias, fundações públicas federais e órgãos da administração direta. Através de tais serviços, os entes representados podem realizar, de forma eletrônica, o cadastro, a atualização, a extinção, e a consulta periódica de seus créditos.\nA API é destinada às autarquias e fundações públicas federais que possuem dívidas para inscrição na Dívida Ativa da União.\n",
+        "endpoints": [
+            "https://apigateway.conectagov.estaleiro.serpro.gov.br/api-divida/v1/divida"
+        ],
+        "tecnologias": "SOAP ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Infraestrutura do próprio órgão"
+    },
+    {
+        "nome": "Integra Siafi – Nota de Crédito e de Dotação",
+        "link": "https://www.gov.br/conecta/catalogo/apis/integra-siafi",
+        "descricao": "A API INTEGRA SIAFI faz a comunicação online do Sistema Integrado de Administração Financeira – SIAFI, para registros e consulta de documentos SIAFI representantes da execução orçamentária e financeira dos órgãos públicos federais, como Nota de crédito e Nota de dotação.\n",
+        "endpoints": [
+            "https://apigateway.serpro.gov.br/api-siafi/1.0.0"
+        ],
+        "tecnologias": "REST / JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "SERPRO"
+    },
+    {
+        "nome": "PagTesouro  -  Órgãos Arrecadadores",
+        "link": "https://www.gov.br/conecta/catalogo/apis/pagtesouro-prestador-de-servico-de-pagamento",
+        "descricao": "O PagTesouro é a plataforma digital para pagamento e recolhimento de valores à Conta Única do Tesouro Nacional. Atua no cenário de recolhimento de receitas de Órgãos Públicos Federais como taxas (custas judiciais, emissão de passaporte etc), aluguéis de imóveis públicos, serviços administrativos e educacionais, multas, entre outros, permitindo o pagamento em forma digital, assim como a impressão do boleto de pagamento.\nO serviço cujo pagamento será realizado utilizando o PagTesouro, deverá ser cadastrado no SISGRU, momento em que será gerado um código identificador para o serviço. O SISGRU – Sistema de Gestão de Recolhimentos da União é acessado pelos usuários das unidades gestoras utilizando as mesmas credenciais de acesso ao SIAFI – Sistema Integrado de Administração Financeira.\n",
+        "endpoints": [
+            "https://pagtesouro.tesouro.gov.br"
+        ],
+        "tecnologias": "REST / JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Serpro"
+    },
+    {
+        "nome": "PagTesouro  -  Prestadores de Serviços de Pagamentos",
+        "link": "https://www.gov.br/conecta/catalogo/apis/pagtesouro",
+        "descricao": "O PagTesouro é a plataforma digital para pagamento e recolhimento de valores à Conta Única do Tesouro Nacional. Por meio da plataforma, as empresas prestadoras de serviços de pagamentos poderão realizar o recolhimento dos valores por meio de: credenciamento prévio junto à Secretaria do Tesouro Nacional da Secretaria Especial de Fazenda do Ministério da Economia; e integração de sua solução tecnológica ao PagTesouro.  A empresa prestadora de serviços de pagamentos deverá ter autorização do Banco Central para operar. \nAdesão dos Prestadores de Serviços de Pagamento (PSPs) ao Modelo de Credenciamento do sistema PagTesouro, instituído pela Secretaria do Tesouro Nacional (STN), tendo como principal objetivo o pagamento das Guias de Recolhimento da União (GRUs) pelos contribuintes de forma digital como, por exemplo, via cartão de crédito.\nEsta API destina-se aos Prestadores de Serviço de Pagamento.\n",
+        "endpoints": [
+            "https://pagtesouro.tesouro.gov.br"
+        ],
+        "tecnologias": "REST / JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "SERPRO"
+    },
+    {
+        "nome": "SADIPEM - Sistema de Análise da Dívida Pública, Operações de Crédito e Garantias da União, Estados e Municípios",
+        "link": "https://www.gov.br/conecta/catalogo/apis/sadipem-sistema-de-analise-da-divida-publica-operacoes-de-credito-e-garantias-da-uniao-estados-e-municipios",
+        "descricao": "Permite aos entes da federação consultar informações referentes ao cadastro de dívidas, operações de crédito e garantias da União, Estados e municípios.\n",
+        "endpoints": [
+            "http://apidatalake.tesouro.gov.br/docs/sadipem"
+        ],
+        "tecnologias": "API REST/XML ",
+        "tags": "",
+        "seguranca": "Nenhum",
+        "hospedagem": "Secretaria do Tesouro Nacional"
+    },
+    {
+        "nome": "SIAFI - Consultar Tabelas Administrativas",
+        "link": "https://www.gov.br/conecta/catalogo/apis/consultar-tabelas-administrativas-do-siafi",
+        "descricao": "Esta API permite a Consulta às Tabelas Administrativas do SIAFI e suas respectivas operações\n",
+        "endpoints": [
+            "https://servicos-siafi.tesouro.gov.br/siafi2020/services/tabelas/consultarTabelasAdministrativas"
+        ],
+        "tecnologias": "SOAP XML ",
+        "tags": "",
+        "seguranca": "WS-Security",
+        "hospedagem": "STN"
+    },
+    {
+        "nome": "SIAFI - Manter Contas a Pagar e Receber",
+        "link": "https://www.gov.br/conecta/catalogo/apis/novo-siafi-manter-contas-a-pagar-e-receber",
+        "descricao": "A API  SIAFI - Manter Contas a Pagar e Receber tem a finalidade de oferecer uma maneira mais eficiente para as Unidades Gestoras do Governo Federal realizarem suas receitas e despesas, com maior aderência às normas vigentes e maior controle sobre as fases de execução e sobre os saldos disponíveis, de forma integrada ao SIAFI WEB.\nEsta API realiza as seguintes operações:\n",
+        "endpoints": [
+            "https://servicos-siafi.tesouro.gov.br/siafi2020/services/cpr/manterContasPagarReceber"
+        ],
+        "tecnologias": "SOAP / XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Secretaria do Tesouro Nacional "
+    },
+    {
+        "nome": "SIAFI - Manter Programação",
+        "link": "https://www.gov.br/conecta/catalogo/apis/manter-programacao",
+        "descricao": "Esta API realiza as seguintes operações:\n \n \n",
+        "endpoints": [
+            "https://servicos-siafi.tesouro.gov.br/siafi2020/services/pf/manterProgramacaoFinanceira"
+        ],
+        "tecnologias": "SOAP / XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Secretaria do Tesouro Nacional"
+    },
+    {
+        "nome": "SIAFI – Módulo Orçamentário",
+        "link": "https://www.gov.br/conecta/catalogo/apis/siafi-2013-modulo-orcamentario",
+        "descricao": "A API SIAFI – Módulo Orçamentário tem a finalidade de oferecer uma maneira mais eficiente para as Unidades Gestoras do Governo Federal realizarem suas despesas, por meio das Operações de Empenho e Pre-empenho, de forma integrada ao SIAFI WEB.\n",
+        "endpoints": [
+            "https://servicos-siafi.tesouro.gov.br/siafi/services/orcamentario/ manterOrcamentario?"
+        ],
+        "tecnologias": "SOAP / XML ",
+        "tags": "",
+        "seguranca": "WS-Security",
+        "hospedagem": "SERPRO"
+    },
+    {
+        "nome": "SICONFI - Extratos das declarações contábeis",
+        "link": "https://www.gov.br/conecta/catalogo/apis/siconfi-extratos-das-declaracoes-contabeis",
+        "descricao": "Informações contábeis dos entes federativos: relatórios RREO (Relatório Resumido da Execução Orçamentária), RGF (Relatório de Gestão Fiscal), DCA (Balanço Anual), MSC (Matriz de Saldos Contábeis) e seus anexos, além dos extratos de entregas desses relatórios.\nA API consulta o Sistema de Informações Contábeis e Fiscais do Setor Público Brasileiro - SICONFI, ferramenta destinada ao recebimento de informações contábeis, financeiras e de estatísticas fiscais oriundas de municípios, estados, o DF e União, e o uso destina-se tanto aos entes federados quanto à sociedade civil.\n",
+        "endpoints": [
+            "http://apidatalake.tesouro.gov.br/docs/siconfi/"
+        ],
+        "tecnologias": "API REST/XML ",
+        "tags": "",
+        "seguranca": "Outro",
+        "hospedagem": "Secretaria do Tesouro Nacional"
+    },
+    {
+        "nome": "SISGRU - Guia de Recolhimento da União",
+        "link": "https://www.gov.br/conecta/catalogo/apis/sisgru-guia-de-recolhimento-da-uniao",
+        "descricao": "A API do SISGRU (Sistema de Gestão de Recolhimento da União) tem como objetivo aperfeiçoar os mecanismos de gestão da GRU-Guia de Recolhimento da União, oferecendo aos gestores funcionalidades de consultas das GRUs sem separação de exercícios, com detalhamento do seu histórico e rastreabilidade para os respectivos documentos contábeis. Permite também efetuar retificações e restituições de receita.\n",
+        "endpoints": [
+            "https://webservice.sisgru.tesouro.gov.br/sisgru/services/v1/grus"
+        ],
+        "tecnologias": "REST / XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "SERPRO"
+    },
+    {
+        "nome": "Acompanhamento da Execução das Empresas Estatais - SIOP",
+        "link": "https://www.gov.br/conecta/catalogo/apis/acompanhamento-da-execucao-das-empresas-estatais",
+        "descricao": "Esta API contempla serviços que permitem o cadastramento e a consulta dos dados de execução mensal das empresas estatais.\n",
+        "endpoints": [
+            "https://webservice.siop.gov.br/services/WSExecucaoEstatais?wsdl"
+        ],
+        "tecnologias": "SOAP XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Ministério da Economia"
+    },
+    {
+        "nome": "Alterações Orçamentárias SIOP",
+        "link": "https://www.gov.br/conecta/catalogo/apis/alteracoes-orcamentarias",
+        "descricao": "Esta API contempla operações que permitem o cadastramento e a consulta das alterações orçamentárias e inclui também operações para Desbloqueio do saldo de ações do PAC\n \n",
+        "endpoints": [
+            "https://siop.planejamento.gov.br/services/WSAlteracoesOrcamentarias?wsdl"
+        ],
+        "tecnologias": "SOAP / XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Ministério da Economia"
+    },
+    {
+        "nome": "Avaliação do PPA",
+        "link": "https://www.gov.br/conecta/catalogo/apis/avaliacao",
+        "descricao": "Esta API tem por objetivo disponibilizar informações da Avaliação do PPA.\n",
+        "endpoints": [
+            "https://www.siop.planejamento.gov.br/services/WSAvaliacao?wsdl"
+        ],
+        "tecnologias": "SOAP XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Ministério da Economia"
+    },
+    {
+        "nome": "Consulta Execução Orçamentária SIOP",
+        "link": "https://www.gov.br/conecta/catalogo/apis/consulta-execucao-orcamentaria",
+        "descricao": "Esta API tem por objetivo fornecer uma interface que possibilite a consulta de execução orçamentária.  O serviço disponibiliza apenas uma operação para consultar a execução orçamentária, especificamente, para a Secretaria de Desenvolvimento da Infraestrutura (SDI), antiga Secretaria do Programa de Aceleração do Crescimento - SEPAC\n",
+        "endpoints": [
+            "https://webservice.siop.gov.br/services/WSExecucaoOrcamentaria?wsdl"
+        ],
+        "tecnologias": "SOAP XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Ministério da Economia"
+    },
+    {
+        "nome": "Emendas Individuais SIOP",
+        "link": "https://www.gov.br/conecta/catalogo/apis/emendas-individuais-siop",
+        "descricao": "Esta API possibilita operações de consulta de informações das Emendas Individuais dos Parlamentares, de cadastro e acompanhamento Pedidos de alterações Qualitativas e Quantitativas relativas a Emendas Individuais, assim como Pedidos de Saneamento de Impedimentos de Emendas Individuais. É possível também cadastrar e priorizar beneficiários das Emendas Individuais e seus impedimentos.\nDestina-se a Ministérios que precisam fazer alterações orçamentárias em Emendas Individuais em grande quantidade.\n",
+        "endpoints": [
+            "https://siop.planejamento.gov.br/modulo/itens/api"
+        ],
+        "tecnologias": "Arquitetura de Microserviços / GraphQL ",
+        "tags": "",
+        "seguranca": null,
+        "hospedagem": "Ministério da Economia"
+    },
+    {
+        "nome": "Monitoramento do PPA",
+        "link": "https://www.gov.br/conecta/catalogo/apis/monitoramento-do-ppa",
+        "descricao": "Esta API disponibiliza informações do Monitoramento do PPA.\n",
+        "endpoints": [
+            "https://www.siop.planejamento.gov.br/services/WSMonitoramento?wsdl"
+        ],
+        "tecnologias": "SOAP / XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Ministério da Economia"
+    },
+    {
+        "nome": "Precatórios do SIOP",
+        "link": "https://www.gov.br/conecta/catalogo/apis/precatorios-do-siop",
+        "descricao": "Esta API tem por objetivo registrar anualmente informações de precatórios com seus respectivos beneficiários fornecidas pelos tribunais responsáveis por sua definição.\n \n",
+        "endpoints": [
+            "https://webservice.siop.gov.br/services/precatorios/WSPrecatorios?wsdl"
+        ],
+        "tecnologias": "SOAP XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Ministério da Economia"
+    },
+    {
+        "nome": "Qualitativo do SIOP",
+        "link": "https://www.gov.br/conecta/catalogo/apis/qualitativo-do-siop",
+        "descricao": "Esta API possibilita a consulta de dados referentes à fase qualitativa das Unidades Orçamentárias e Órgãos Setoriais.\n",
+        "endpoints": [
+            "https://webservice.siop.gov.br/services/WSQualitativo?wsdl"
+        ],
+        "tecnologias": "SOAP / XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Ministério da Economia"
+    },
+    {
+        "nome": "Quantitativo do SIOP",
+        "link": "https://www.gov.br/conecta/catalogo/apis/wsquantitativo-do-siop",
+        "descricao": "Esta API possibilita operações para consulta e cadastro. Inclui também operações para tratar Acompanhamento Orçamentário e Execução Financeira do SIAFI.\n",
+        "endpoints": [
+            "https://webservice.siop.gov.br/services/WSQuantitativo?wsdl"
+        ],
+        "tecnologias": "SOAP / XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Ministério da Economia"
+    },
+    {
+        "nome": "Receitas do SIOP",
+        "link": "https://www.gov.br/conecta/catalogo/apis/receitas-do-siop",
+        "descricao": "Esta API fornece uma interface que possibilita a interoperabilidade entre os sistemas governamentais e o SIOP para a transmissão de dados referentes à captação de base externa para os cenários de arrecadação de receitas.\n",
+        "endpoints": [
+            "https://webservice.siop.gov.br/services/WSReceita?wsdl"
+        ],
+        "tecnologias": "SOAP XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Ministério da Economia"
+    },
+    {
+        "nome": "SIOP - Gestão de Credencial de Acesso",
+        "link": "https://www.gov.br/conecta/catalogo/apis/gestao-de-credencial-de-acesso",
+        "descricao": "Esta API ter por objetivo fornecer uma interface que possibilite a interoperabilidade entre os sistemas governamentais e o SIOP para a troca e recuperação da senha da credencial de acesso aos demais web services, oferecendo um processo mais seguro.\n",
+        "endpoints": [
+            "https://webservice.siop.gov.br/services/credencial/WSCredencial?wsdl"
+        ],
+        "tecnologias": "SOAP XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Ministério da Economia (ME)"
+    },
+    {
+        "nome": "Acompanhamento de Serviço Público Digital",
+        "link": "https://www.gov.br/conecta/catalogo/apis/acompanhamento-de-servico-publico-digital",
+        "descricao": "Esta API é responsável por monitorar as etapas de atendimento dos Serviços Digitais e o tempo de cada uma delas.\nO Decreto nº 8936/2016 instituiu a Plataforma de Cidadania Digital e dispôs sobre a oferta dos serviços públicos digitais, no âmbito dos órgãos e das entidades da administração pública federal direta, autárquica e fundacional.  No seu artigo 3º, incisos IV e V foi instituído a ferramenta de avaliação da satisfação dos usuários em relação aos serviços públicos prestados e o painel de monitoramento do desempenho dos serviços públicos prestados.\n \n",
+        "endpoints": [
+            "https://acompanhamento.servicos.gov.br/api/acompanhamento/"
+        ],
+        "tecnologias": "PHP / JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Ministério da Economia"
+    },
+    {
+        "nome": "Avaliação da Satisfação com Serviços Públicos Digitais",
+        "link": "https://www.gov.br/conecta/catalogo/apis/avaliacao-de-servicos-publicos-digitais",
+        "descricao": "Esta API é responsável por disponibilizar a avaliação de satisfação com os Serviços Públicos Digitais\nO Decreto nº 8936/2016, instituiu a Plataforma de Cidadania Digital e dispôs sobre a oferta dos serviços públicos digitais, no âmbito dos órgãos e das entidades da administração pública federal direta, autárquica e fundacional.  No seu artigo 3º, incisos IV e V foi instituído a ferramenta de avaliação da satisfação dos usuários em relação aos serviços públicos prestados e o painel de monitoramento do desempenho dos serviços públicos prestados.\n \n \n",
+        "endpoints": [
+            "https://avaliacao.servicos.gov.br/api/avaliacao/"
+        ],
+        "tecnologias": "REST / JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Ministério da Economia"
+    },
+    {
+        "nome": "WSDenatran - Veículos, Condutores e Infrações",
+        "link": "https://www.gov.br/conecta/catalogo/apis/wsdenatran",
+        "descricao": "O serviço WSDenatran (Consulta On-line Denatran) é um serviço de integração entre sistemas, que possibilita o acesso às informações oficiais dos sistemas de trânsito do Denatran, sobre veículos (Renavam), condutores (Renach) e infrações (Renainf). Essa API é fornecida mediante termo de autorização realizado no Denatran e contração do consulta online com o SERPRO.\n",
+        "endpoints": [],
+        "tecnologias": "REST / JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "SERPRO"
+    },
+    {
+        "nome": "Ações de Aprendizagem",
+        "link": "https://www.gov.br/conecta/catalogo/apis/acoes-de-aprendizagem",
+        "descricao": "Permite consultar as ações de aprendizagem concluídas, ministradas e recomendada para o CPF informado.\n",
+        "endpoints": [],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Infraestrutura do próprio órgão."
+    },
+    {
+        "nome": "Certidão de Antecedentes Criminais",
+        "link": "https://www.gov.br/conecta/catalogo/apis/antecedentes-criminais",
+        "descricao": "A API Antecedentes Criminais retorna a informação de NADA CONSTA de antecedentes criminais transitados em julgado, do mesmo modo que o SINCAC – Sistema Nacional de Emissão de Certidões de Antecedentes Criminais para fins civis, disponível para consulta pelo cidadão na internet – https://servicos.dpf.gov.br/antecedentes-criminais/certidao.  \nPara emitir o NADA CONSTA, a API consulta a base de dados do Sistema Nacional de Informações Criminais – SINIC, gerenciado pela Polícia Federal e alimentado a partir de informações da própria Polícia Federal e de órgãos das Justiças Estaduais e Federal, Polícia Rodoviária Federal, Polícias Civis, Polícias Penais Federal, Estaduais e Distrital.\n \nQual o Impacto desta API?\nO Impacto estimado da Interoperabilidade deste serviço público é de R$ 7,98.\nPara maiores informações sobre a metodologia de Cálculo de Impacto da Interoperabilidade, acesse:  https://www.gov.br/governodigital/pt-br/governanca-de-dados/calculadora-de-impacto\n \n",
+        "endpoints": [
+            "https://gerenciador-conecta.readthedocs.io/manual_recebedor_dados.html#roteiro-geracao-chaves-acesso"
+        ],
+        "tecnologias": "SOAP / XML ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "Polícia Federal"
+    },
+    {
+        "nome": "Certidão de Quitação Eleitoral",
+        "link": "https://www.gov.br/conecta/catalogo/apis/quitacao-eleitoral",
+        "descricao": "Você é CIDADÃO e quer emitir a sua Certidão de Quitação Eleitoral? \nAcesse o Link: https://www.tse.jus.br/eleitor/certidoes/certidao-de-quitacao-eleitoral\n \nA Certidão de Quitação Eleitoral é um documento que comprova que o cidadão não tem pendências na Justiça Eleitoral. A certidão pode ser obtida pela internet, ou ainda em postos de atendimento denominados Cartórios Eleitorais.\nNa internet, a emissão da certidão é possível se não houver divergência entre os dados informados e os registrados no Cadastro Eleitoral, se não existir restrição no histórico de sua inscrição, tais como faltas não justificadas às eleições ou prestação de contas pendentes - no caso pessoas que foram candidatos em eleições - dentre outras faltas passíveis de multa pela Justiça Eleitoral.\nOs serviços disponibilizados permitem Consultar a situação de Quitação Eleitoral ou Emitir a Certidão em em formato PDF.\n \nQual o Impacto desta API?\nO Impacto estimado da Interoperabilidade deste serviço público é de R$ 7,70.\nPara maiores informações sobre a metodologia de Cálculo de Impacto da Interoperabilidade, acesse:  https://www.gov.br/governodigital/pt-br/governanca-de-dados/calculadora-de-impacto\n \n",
+        "endpoints": [
+            "https://gerenciador-conecta.readthedocs.io/manual_recebedor_dados.html#roteiro-geracao-chaves-acesso"
+        ],
+        "tecnologias": "JSON ",
+        "tags": "",
+        "seguranca": "Outro",
+        "hospedagem": "TSE - Tribunal Superior Eleitoral"
+    },
+    {
+        "nome": "Metadados Estatísticos do IBGE",
+        "link": "https://www.gov.br/conecta/catalogo/apis/metadados-estatisticos-do-ibge",
+        "descricao": "IBGE-Metadados (APIMETADADOS) tem como finalidade consultar as principais classes de metadados provenientes do Sistema de Metadados Estatísticos do IBGE, como: operação estatística, ocorrência de operação estatística, documentos de referência, variáveis, entre outras.\nDessa forma, os usuários/sistemas poderão recuperar os metadados relacionados a estas classes, bem como os metadados da ficha metodológica que descrevem os objetivos, metas e indicadores da plataforma de Objetivos de Desenvolvimento Sustentável.\n",
+        "endpoints": [
+            "https://apimetadados.ibge.gov.br/"
+        ],
+        "tecnologias": "SOAP JSON ",
+        "tags": "",
+        "seguranca": "SSL",
+        "hospedagem": "IBGE"
+    },
+    {
+        "nome": "vLibras - Língua Brasileira de Sinais",
+        "link": "https://www.gov.br/conecta/catalogo/apis/vlibras",
+        "descricao": "O VLibras é uma suíte de ferramentas utilizadas na tradução automática do Português para a Língua Brasileira de Sinais.\nÉ possível utilizar essas ferramentas tanto no computador Desktop quanto em smartphones e tablets.\nSite oficial: vlibras.gov.br.\n \nO que a API proporciona\n \n",
+        "endpoints": [],
+        "tecnologias": "REST ",
+        "tags": null,
+        "seguranca": "Nenhum",
+        "hospedagem": "Ministério da Economia (ME)"
+    }
+]

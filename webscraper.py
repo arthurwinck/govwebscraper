@@ -1,39 +1,62 @@
 import requests
-from bs4 import BeautifulSoup
-from bs4 import Tag
 import re
+import json
+from bs4 import BeautifulSoup, Tag
+from datetime import datetime
+
+CONECTA_CATALOGO_API_URL = "https://www.gov.br/conecta/catalogo/"
+EXPORT_FILE_PATH = "./json/"
 
 class Webscraper():
     def __init__(self) -> None:
         pass
 
-    def execute(self) -> dict:
+    def execute(self) -> None:
         namelink_dict = self.extract_namelink()
         detailed_dict = self.extract_details(namelink_dict)
-        
-        return detailed_dict
-    
-    # <p>
-    #   <a data-cke-rtc-autolink="true" data-cke-rtc-autolink-text="https://apigateway.conectagov.estaleiro.serpro.gov.br/api-quitacao-eleitoral/v3/eleitores/quitacao-eleitoral" 
-    #   data-cke-rtc-autolink-url="https://apigateway.conectagov.estaleiro.serpro.gov.br/api-quitacao-eleitoral/v3/eleitores/quitacao-eleitoral"
-    #   href="https://apigateway.conectagov.estaleiro.serpro.gov.br/api-quitacao-eleitoral/v3/eleitores/quitacao-eleitoral"
-    #   id="jazz_ui_ResourceLink_22">
-    #       https://h-apigateway.conectagov.estaleiro.serpro.gov.br/api-quitacao-eleitoral/v3/eleitores/quitacao-eleitoral
-    #   </a>
-    # 
-    #   </p>, <p><a data-cke-rtc-autolink="true" data-cke-rtc-autolink-text="https://apigateway.conectagov.estaleiro.serpro.gov.br/api-quitacao-eleitoral/v2/eleitores/certidao-quitacao-eleitoral" data-cke-rtc-autolink-url="https://apigateway.conectagov.estaleiro.serpro.gov.br/api-quitacao-eleitoral/v2/eleitores/certidao-quitacao-eleitoral" href="https://apigateway.conectagov.estaleiro.serpro.gov.br/api-quitacao-eleitoral/v2/eleitores/certidao-quitacao-eleitoral" id="jazz_ui_ResourceLink_23">https://h-apigateway.conectagov.estaleiro.serpro.gov.br/api-quitacao-eleitoral/v2/eleitores/certidao-quitacao-eleitoral</a></p>, <p><a class="external-link" href="https://h-apigateway.conectagov.estaleiro.serpro.gov.br/oauth2/jwt-token" target="_self" title="https://h-apigateway.conectagov.estaleiro.serpro.gov.br/oauth2/jwt-token">https://h-apigateway.conectagov.estaleiro.serpro.gov.br/oauth2/jwt-token</a></p>, <p> </p>, <p><strong>Para consultar a documentação técnica da API acesse:</strong></p>, <p><a class="external-link" href="https://www.gov.br/conecta/catalogo/apis/quitacao-eleitoral/Documentacao-API-Certidao-Quitacao-Eleitoral_v2.pdf/at_download/file" target="_self" title="https://www.gov.br/conecta/catalogo/apis/quitacao-eleitoral/Documentacao-API-Certidao-Quitacao-Eleitoral_v2.pdf/at_download/file">https://www.gov.br/conecta/catalogo/apis/quitacao-eleitoral/Documentacao-API-Certidao-Quitacao-Eleitoral_v2.pdf/at_download/file</a></p>, <p> </p>, <p><strong>Atenção:</strong> Caso seja a primeira integração desenvolvida para acesso a uma API da Plataforma Conecta, é necessário previamente cadastrar os <span id="docs-internal-guid-fa315e3d-7fff-dee9-10f8-411c6bec8ca9">IPs <span id="docs-internal-guid-fa315e3d-7fff-dee9-10f8-411c6bec8ca9">do órgão</span> para que se <span id="docs-internal-guid-fa315e3d-7fff-dee9-10f8-411c6bec8ca9"></span>proceda a criação de regra de firewall no Serpro que permita o acesso <span id="docs-internal-guid-fa315e3d-7fff-dee9-10f8-411c6bec8ca9">à Plataforma</span>.​</span></p>, <p> </p>, <p><span><strong>Atenção:</strong> Para geração das chaves de acesso, consulte a seção de Gestor Consumidor de APIs do Gerenciador Conecta em:</span></p>, <ul>
-    # <li><span><a class="external-link" href="https://gerenciador-conecta.readthedocs.io/manual_recebedor_dados.html#roteiro-geracao-chaves-acesso" target="_blank" title="https://gerenciador-conecta.readthedocs.io/manual_recebedor_dados.html#roteiro-geracao-chaves-acesso">https://doc.conectagov.estaleiro.serpro.gov.br/man/gestorConsumidorAPIs/#geracao-das-chaves-de-acesso</a></span></li>
-    # </ul>
+        self.export_to_json(detailed_dict)
+
+    def export_to_json(self, dict: dict):
+        json_str = json.dumps(dict, indent=4, ensure_ascii=False)
+
+        file_path = f"{EXPORT_FILE_PATH}/govapi-{datetime.today().strftime('%Y%m%d%H%M%S')}.json"
+        with open(file_path, 'w', encoding='utf8') as file:
+            file.write(json_str)
+
+    def extract_meta_infos(self, site: BeautifulSoup, meta_info_list: list, dict: dict):
+        for meta_info in meta_info_list:
+            if site.find(id=meta_info) is not None:
+                meta_info_text = site.find(id=meta_info).find_all('p')[1].text
+                if meta_info == "tags":
+                    dict[meta_info] = list(filter(lambda elem: elem != "", meta_info_text.split("#")))
+                else:
+                    dict[meta_info] = meta_info_text
+            else:
+                dict[meta_info] = None
+
+    def extract_list(self, value):
+        if isinstance(value, list):
+            return value.pop()
+        return value
 
     def search_for_link(self, tag: Tag, link):
-        # list(map(lambda elem: elem ,tag.find_next_siblings()))
         next_siblings = tag.find_next_siblings()
 
-        return next_siblings
+        link_list = []
+
+        for sibling in next_siblings:
+            all_links_in_sibling = sibling.find_all('a')
+
+            for link in all_links_in_sibling:
+                link_list.append(link.get('href'))
+
+        return link_list
 
     def extract_details(self, namelink_dict: dict) -> dict:
         detailed_dict_list = []
         apis_without_detalhamento_tecnico = 0
+        
+        print(f"Quantidade de APIs mapeadas: {len(namelink_dict)}")
 
         for api_name, link in namelink_dict.items():
             detailed_dict_item = {}
@@ -56,9 +79,8 @@ class Webscraper():
             endpoint_classes = site.find_all(class_="api-endpoint-producao")
             endpoints_by_class = []
             
-            if (len(endpoint_classes) > 0):
-                for endpoint in endpoint_classes:
-                    endpoints_by_class.append(endpoint.text.strip())
+            for endpoint in endpoint_classes:
+                endpoints_by_class.append(endpoint.text.strip())
 
             # Necessário o slicing pois detalhamento-tecnico é usado em duas seções (o header do accordion e o body dele, por isso só pegamos o segundo div) 
             endpoint_tags_regex = site.find_all(class_="detalhamento-tecnico")[1::2]
@@ -73,22 +95,23 @@ class Webscraper():
             endpoints.extend(endpoints_by_class)
             endpoints.extend(endpoints_by_regex)
 
-            endpoints = list(filter(lambda elem: elem != None and elem != [], endpoints))
+            endpoints = list(map(lambda filtered_elem: self.extract_list(filtered_elem), filter(lambda elem: elem != None and elem != [] and elem != "", endpoints)))
 
             detailed_dict_item["endpoints"] = endpoints
 
             if len(endpoints) == 0:
                 apis_without_detalhamento_tecnico += 1
 
+            meta_info_list = ["tecnologias", "tags", "seguranca", "hospedagem"]
+            self.extract_meta_infos(site, meta_info_list, detailed_dict_item)
+            
             detailed_dict_list.append(detailed_dict_item)
 
-        print(apis_without_detalhamento_tecnico)
-
-        return
+        return detailed_dict_list
 
 
     def extract_namelink(self) -> dict:
-        main_page_content = requests.get("https://www.gov.br/conecta/catalogo/").content
+        main_page_content = requests.get(CONECTA_CATALOGO_API_URL).content
         site = BeautifulSoup(main_page_content, "html.parser")
         apis_section = site.find(class_="apis")
         rows = apis_section.find_all(class_="row")
